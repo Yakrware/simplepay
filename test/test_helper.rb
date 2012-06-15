@@ -58,7 +58,7 @@ module Simplepay #:nodoc:
           end
         end
       end
-    end unless method_defined?(:should_have_service_field)
+    end # unless method_defined?(:should_have_service_field)
 
 
     private
@@ -72,7 +72,7 @@ module Simplepay #:nodoc:
       wanted.each {|w| ret << opts.delete(w)}
       raise ArgumentError, "Unsupported options given: #{opts.keys.join(', ')}" unless opts.keys.empty?
       return *ret
-    end unless defined?(:get_options!)
+    end # unless defined?(:get_options!)
 
   end
 end
