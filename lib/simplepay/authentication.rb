@@ -18,6 +18,13 @@ module Simplepay
       compute_signature
     end
 
+    # TODO refactor, temporary solution to make it work with the different
+    # endpoint urls and http verbs
+    def sign_get
+      make_canonical_string('GET')
+      compute_signature
+    end
+
     private
 
     def compute_signature
@@ -25,8 +32,8 @@ module Simplepay
       Base64.encode64(OpenSSL::HMAC.digest(digest, @secret_key, @canonical)).chomp
     end
 
-    def make_canonical_string
-      @canonical = "POST\n#{@uri.host}\n#{@uri.path}\n"
+    def make_canonical_string(method='POST')
+      @canonical = "#{method}\n#{@uri.host}\n#{@uri.path}\n"
       params = @params.reject{|k,v| v.blank? }.inject({}) { |a, (k,v)| a[k.to_s] = v; a }
       params = params.sort.inject([]) { |a, v| a << urlencode(v[0]) + '=' + urlencode(v[1]) }.join('&')
       @canonical += params
