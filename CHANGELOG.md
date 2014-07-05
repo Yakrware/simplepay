@@ -1,3 +1,7 @@
+== 0.4.0 2014-07-05
+
+* Stripping gem to bare essentials
+
 == 0.2.3 2011-2-10
 
 * Supports Amazon Signature Version 2

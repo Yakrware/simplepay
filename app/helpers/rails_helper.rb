@@ -1,13 +1,11 @@
-require 'action_view/base'
-
 module Simplepay
-  module Helpers
+  module Rails
     
     ##
     # Adds helpers to your views for generating the correct HTML forms and 
     # valid signatures.
     # 
-    module RailsHelper
+    module SimplepayHelper
       
       ##
       # This is the general interface for generating your Simple Pay service

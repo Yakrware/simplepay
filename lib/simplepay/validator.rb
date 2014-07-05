@@ -2,31 +2,11 @@ require 'cgi'
 require 'nokogiri'
 require 'open-uri'
 
-module Simplepay
-  module Helpers
-    
-    ##
-    # Adds a +valid_simplepay_request?+ method to your ActionControllers.
-    # 
-    # In order to use this, you should just directly hand your ipn endpoint and 
-    # +params+ into the method:
-    # 
-    #     class FooController < ApplicationController
-    #     
-    #       def receive_ipn
-    #         if valid_simplepay_request?(endpoint, request.query_params)
-    #           ... record something useful ...
-    #         else
-    #           ... maybe log a bad request? ...
-    #         end
-    #       end
-    #     
-    #     end
-    # 
-    module NotificationHelper
+module Simplepay    
+    module Validator
+      extend ActiveSupport::Concern
       
       protected
-      
       
       ##
       # Authenticates the incoming request by validating the +signature+ 
