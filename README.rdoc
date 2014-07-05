@@ -1,10 +1,8 @@
 = simplepay (Rails Amazon Simple Pay Interface)
 
-http://simplepay.rubyforge.org
-
 == DESCRIPTION:
 
-This gem provides a Rails 3 interface to the Amazon Simple Pay payment service.
+This gem provides a Rails 4 interface to the Amazon Simple Pay payment service.
 
 == FEATURES/PROBLEMS:
 
@@ -21,7 +19,7 @@ Add simplepay to your Bundler Gemfile
 
     (in Gemfile)
     
-    gem "simplepay"
+    gem "simplepay-rails4", :github => 'yakrware/simplepay'
 
 Configure the gem with your Amazon Web Services credentials:
 
@@ -29,12 +27,6 @@ Configure the gem with your Amazon Web Services credentials:
     
     Simplepay.aws_access_key_id     = 'MYAMAZONACCESSKEYID'
     Simplepay.aws_secret_access_key = 'MYAMAZONSECRETACCESSKEY'
-
-Then, let Rails know about the Simplepay::Helpers:
-
-    (in app/controllers/application_controller.rb)
-    
-    require 'simplepay/rails'
 
 === Obtaining Amazon Web Services Credentials
     
@@ -110,7 +102,7 @@ that sellers items:
       
 == INSTALL:
 
-    sudo gem install simplepay
+    sudo gem install simplepay-rails4
 
 == LICENSE:
 
@@ -118,6 +110,7 @@ that sellers items:
 
 Copyright (c) 2008 Nathaniel E. Bibler
 Copyright (c) 2011 Derrick Parkhurst
+Copyright (c) 2014 Charles DuBose
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
