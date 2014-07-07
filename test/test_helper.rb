@@ -1,11 +1,8 @@
 require 'stringio'
-require 'test/unit'
+gem 'minitest'
+require 'minitest/autorun'
 
 require 'rubygems'
-require 'redgreen' rescue nil
-
-require 'shoulda'
-require 'mocha'
 
 require File.dirname(__FILE__) + '/../lib/simplepay'
 

@@ -1,30 +1,30 @@
 require File.dirname(__FILE__) + '/../../test_helper'
-require "simplepay/helpers/notification_helper"
+require "simplepay/validator"
 
-class TestNotificationClass
-  include Simplepay::Helpers::NotificationHelper
+class TestValidatorClass
+  include Simplepay::Validator
   
   def testing(request_hash = {})
     valid_simplepay_request?(request_hash)
   end
 end
 
-class Simplepay::Helpers::TestNotificationHelper < Test::Unit::TestCase
+class Simplepay::TestValidatorHelper < Test::Unit::TestCase
   
-  context 'Simplepay::Helpers::NotificationHelper' do
+  context 'Simplepay::Validator' do
     
     setup do
-      @notifier = TestNotificationClass.new
+      @validator = TestValidatorClass.new
     end
     
     should 'defer to Simplepay::Authentication.authentic?' do
       #Simplepay::Authentication.expects(:authentic?).with({:test => 'testing'}, 'signed').returns(true)
-      #assert @notifier.testing({:test => 'testing', :signature => 'signed'})
+      #assert @validator.testing({:test => 'testing', :signature => 'signed'})
     end
     
     should 'work with string hash keys' do
       #Simplepay::Authentication.expects(:authentic?).with({:test => 'testing'}, 'signed').returns(true)
-      #assert @notifier.testing({"test" => 'testing', "signature" => 'signed'})
+      #assert @validator.testing({"test" => 'testing', "signature" => 'signed'})
     end
     
   end

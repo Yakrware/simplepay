@@ -1,3 +1,5 @@
+require 'simplepay/constants'
+
 module Simplepay
   module Support
     

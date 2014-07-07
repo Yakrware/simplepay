@@ -20,6 +20,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- test/*`.split("\n")
   
+  s.add_dependency('rails')
   s.add_dependency('nokogiri')
 end
 
