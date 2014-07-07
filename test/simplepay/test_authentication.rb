@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'simplepay/authentication'
 
-class Simplepay::TestAuthentication < Test::Unit::TestCase
+class Simplepay::TestAuthentication < ActiveSupport::TestCase
   
   context 'Simplepay::Authentication' do
     

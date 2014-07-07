@@ -8,7 +8,7 @@ class TestInterval < Simplepay::Support::Interval
   DEFAULT_INTERVAL        = 'testinterval'
 end
 
-class Simplepay::Support::TestInterval < Test::Unit::TestCase
+class Simplepay::Support::TestInterval < ActiveSupport::TestCase
   
   context 'Simplepay::Support::Interval' do
     

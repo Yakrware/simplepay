@@ -1,6 +1,6 @@
-require File.dirname(__FILE__) + '/test_helper.rb'
+require 'test_helper'
 
-class TestSimplepay < Test::Unit::TestCase
+class TestSimplepay < ActiveSupport::TestCase
 
   def setup
   end

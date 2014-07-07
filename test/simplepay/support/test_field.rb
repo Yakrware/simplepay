@@ -6,7 +6,7 @@ class DelegateTest
   def to_s; end
 end
 
-class Simplepay::Support::TestField < Test::Unit::TestCase
+class Simplepay::Support::TestField < ActiveSupport::TestCase
   
   context 'Simplepay::Support::Field' do
     

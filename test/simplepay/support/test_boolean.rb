@@ -1,6 +1,6 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 
-class Simplepay::Support::BooleanTest < Test::Unit::TestCase
+class Simplepay::Support::BooleanTest < ActiveSupport::TestCase
   
   context 'Simplepay::Support::Boolean' do
     

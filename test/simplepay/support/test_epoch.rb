@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'simplepay/support/epoch'
 
-class Simplepay::Support::TestEpoch < Test::Unit::TestCase
+class Simplepay::Support::TestEpoch < ActiveSupport::TestCase
   
   context "Simplepay::Support::Epoch" do
     

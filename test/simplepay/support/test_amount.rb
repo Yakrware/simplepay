@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'simplepay/support/amount'
 
-class Simplepay::Support::TestAmount < Test::Unit::TestCase
+class Simplepay::Support::TestAmount < ActiveSupport::TestCase
   
   context 'Simplepay::Support::Amount' do
     

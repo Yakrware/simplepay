@@ -4,6 +4,5 @@ gemspec
 
 gem "rails", "~> 4.1.0"
 gem 'rake'
-gem 'minitest'
-gem 'shoulda-context'
+gem 'minitest-spec-rails'
 gem "mocha"

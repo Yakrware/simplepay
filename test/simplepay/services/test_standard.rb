@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'simplepay/services/standard'
 
-class Simplepay::Services::TestStandard < Test::Unit::TestCase
+class Simplepay::Services::TestStandard < ActiveSupport::TestCase
 
   def self.model_class; Simplepay::Services::Standard; end
 

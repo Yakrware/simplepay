@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'simplepay/support/subscription_period'
 
-class Simplepay::Support::TestSubscriptionPeriod < Test::Unit::TestCase
+class Simplepay::Support::TestSubscriptionPeriod < ActiveSupport::TestCase
   
   context 'Simplepay::Support::SubscriptionPeriod' do
     

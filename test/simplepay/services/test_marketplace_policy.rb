@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + '/../../test_helper'
 require 'simplepay/services/marketplace_policy'
 
-class Simplepay::Services::TestMarketplacePolicy < Test::Unit::TestCase
+class Simplepay::Services::TestMarketplacePolicy < ActiveSupport::TestCase
   
   def self.model_class; Simplepay::Services::MarketplacePolicy; end
   

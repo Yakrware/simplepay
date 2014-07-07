@@ -1,11 +1,10 @@
-require 'stringio'
-gem 'minitest'
 require 'minitest/autorun'
-
-require 'rubygems'
+require 'active_support'
+require 'minitest-spec-rails'
+require 'minitest-spec-rails/init/active_support'
+require 'minitest-spec-rails/init/mini_shoulda'
 
 require File.dirname(__FILE__) + '/../lib/simplepay'
-
 
 module Simplepay #:nodoc:
   module Macros #:nodoc: all
@@ -58,9 +57,7 @@ module Simplepay #:nodoc:
       end
     end unless method_defined?(:should_have_service_field)
     
-    
-    private
-    
+    protected
     
     # Returns the values for the entries in the args hash who's keys are listed in the wanted array.
     # Will raise if there are keys in the args hash that aren't listed.
@@ -70,15 +67,9 @@ module Simplepay #:nodoc:
       wanted.each {|w| ret << opts.delete(w)}
       raise ArgumentError, "Unsupported options given: #{opts.keys.join(', ')}" unless opts.keys.empty?
       return *ret
-    end unless defined?(:get_options!)
+    end unless method_defined?(:get_options!)
     
   end
 end
 
-module Test #:nodoc: all
-  module Unit
-    class TestCase
-      extend Simplepay::Macros
-    end
-  end
-end
+ActiveSupport::TestCase.send :extend, Simplepay::Macros

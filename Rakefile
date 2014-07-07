@@ -3,6 +3,7 @@
 
 Rake::TestTask.new(:test) do |t|
   t.pattern = 'test/**/test_*.rb'
+  t.libs << 'app'
   t.libs << 'lib'
   t.libs << 'test'
   t.verbose = true

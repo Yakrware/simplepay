@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../../test_helper'
+require 'test_helper'
 require "simplepay/validator"
 
 class TestValidatorClass
@@ -9,7 +9,7 @@ class TestValidatorClass
   end
 end
 
-class Simplepay::TestValidatorHelper < Test::Unit::TestCase
+class Simplepay::TestValidatorHelper < ActiveSupport::TestCase
   
   context 'Simplepay::Validator' do
     

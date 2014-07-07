@@ -1,3 +1,5 @@
+require 'simplepay/helpers/form_helper'
+
 module Simplepay
   
   ##

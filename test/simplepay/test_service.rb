@@ -14,7 +14,7 @@ class TestService < Simplepay::Service
   required_field :required2, :value => 'preset'
 end
 
-class Simplepay::TestService < Test::Unit::TestCase
+class Simplepay::TestService < ActiveSupport::TestCase
   
   context 'Simplepay::Service' do
     
