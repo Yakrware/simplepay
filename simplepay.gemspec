@@ -22,6 +22,6 @@ Gem::Specification.new do |s|
   s.test_files    = `git ls-files -- test/*`.split("\n")
   
   s.add_dependency('rails', '~>4')
-  s.add_runtime_dependency('nokogiri', '~>0')
+  s.add_runtime_dependency('nokogiri', '~>1.6')
 end
 

@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     simplepay-rails4 (0.4.0)
-      nokogiri
-      rails
+      nokogiri (~> 1.6)
+      rails (~> 4)
 
 GEM
   remote: https://rubygems.org/
