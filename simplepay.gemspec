@@ -11,6 +11,7 @@ Gem::Specification.new do |s|
   s.email = ['gem@nathanielbibler.com', 'gem@dubo.se']
   
   s.summary = "Amazon SimplePay helpers for Rails 4"
+  s.description = "Creates buttons to manage paying with amazon payments. Can be used for direct payments or merchant payments"
   
   s.homepage = 'https://github.com/Yakrware/simplepay'
   s.license  = 'MIT'
@@ -20,7 +21,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split("\n")
   s.test_files    = `git ls-files -- test/*`.split("\n")
   
-  s.add_dependency('rails')
-  s.add_dependency('nokogiri')
+  s.add_dependency('rails', '~>4')
+  s.add_runtime_dependency('nokogiri', '~>0')
 end
 

@@ -19,7 +19,7 @@ Add simplepay to your Bundler Gemfile
 
     (in Gemfile)
     
-    gem "simplepay-rails4", :github => 'yakrware/simplepay'
+    gem "simplepay-rails4", :require => 'simplepay'
 
 Configure the gem with your Amazon Web Services credentials:
 
