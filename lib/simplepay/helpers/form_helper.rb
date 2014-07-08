@@ -8,7 +8,9 @@ module Simplepay
       end
       
       def self.content_tag(name, content, options = nil)
-        "<#{name}#{tag_options(options)}>#{content}</#{name}>".try(:html_safe)
+        tag = "<#{name}#{tag_options(options)}>#{content}</#{name}>"
+        tag = tag.html_safe if tag.respond_to?(:html_safe)
+        tag
       end
       
       

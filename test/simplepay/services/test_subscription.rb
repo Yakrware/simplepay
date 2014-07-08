@@ -79,10 +79,6 @@ class Simplepay::Services::TestSubscription < ActiveSupport::TestCase
                               :as       => 'description', 
                               :required => true
 
-    should_have_service_field :account_id,
-                              :as       => 'amazonPaymentsAccountId', 
-                              :required => true
-
     should_have_service_field :ipn_url,
                               :as       => 'ipnUrl', 
                               :required => false

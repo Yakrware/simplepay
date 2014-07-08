@@ -21,7 +21,7 @@ module Simplepay
     private
 
     def compute_signature
-      digest = OpenSSL::Digest::Digest.new('sha256')
+      digest = OpenSSL::Digest.new('sha256')
       Base64.encode64(OpenSSL::HMAC.digest(digest, @secret_key, @canonical)).chomp
     end
 
