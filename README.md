@@ -1,10 +1,10 @@
-= simplepay (Rails Amazon Simple Pay Interface)
+# simplepay (Rails Amazon Simple Pay Interface)
 
-== DESCRIPTION:
+## DESCRIPTION:
 
 This gem provides a Rails 4 interface to the Amazon Simple Pay payment service.
 
-== FEATURES/PROBLEMS:
+## FEATURES/PROBLEMS:
 
 Supports the following Amazon Simple Pay services:
 
@@ -13,7 +13,7 @@ Supports the following Amazon Simple Pay services:
 * Marketplace
 * Donation
 
-== SYNOPSIS:
+## SYNOPSIS:
 
 Add simplepay to your Bundler Gemfile
 
@@ -28,7 +28,7 @@ Configure the gem with your Amazon Web Services credentials:
     Simplepay.aws_access_key_id     = 'MYAMAZONACCESSKEYID'
     Simplepay.aws_secret_access_key = 'MYAMAZONSECRETACCESSKEY'
 
-=== Obtaining Amazon Web Services Credentials
+### Obtaining Amazon Web Services Credentials
     
 1) Create an Amazon Payments Personal Account
     https://payments.amazon.com/sdui/sdui/basicaccount
@@ -48,7 +48,7 @@ Configure the gem with your Amazon Web Services credentials:
 
 Note that the AWS Access Key ID and Secret Access Key is good for both testing in the sandbox and for production use.
 
-=== Generating your Simple Pay forms
+### Generating your Simple Pay forms
 
 Generally, this library will then be used directly from one (or more) of your 
 views.  Depending on the type of Simple Pay service you're using (see 
@@ -67,7 +67,7 @@ optional.  This is done like so:
     }) %>
 
 
-=== Marketplace forms
+### Marketplace forms
 
 Amazon Simple Pay Marketplace makes it easy to facilitate payments between
 buyers and sellers, and to charge a fee for the transaction. If you're building
@@ -100,7 +100,7 @@ that sellers items:
       :variable_marketplace_fee => 5
     }) %>
       
-== INSTALL:
+## INSTALL:
 
     sudo gem install simplepay-rails4
 

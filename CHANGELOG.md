@@ -1,33 +1,34 @@
-== 0.4.0 2014-07-05
+## 0.4.0 2014-07-05
 
 * Stripping gem to bare essentials
+* Updating to work on ruby 2+ testing framework
 
-== 0.2.3 2011-2-10
+## 0.2.3 2011-2-10
 
 * Supports Amazon Signature Version 2
 * Updated for Rails 3
 
-== 0.2.2 2009-06-07
+## 0.2.2 2009-06-07
 
 * Added Donation service support.
 
-== 0.2.1 2009-01-06
+## 0.2.1 2009-01-06
 
 * Maintenance release for missing files.
 
-== 0.2.0 2009-01-03
+## 0.2.0 2009-01-03
 
 * Added Marketplace Service support [Nick Plante (zapnap)]
 * Added Standard and Subscription documentation.
 * Added a submit tag override to simplepay_form_for helper.
 * Added a Simplepay::ResponseStatusCode::All shortcut.
 
-== 0.1.1 2008-12-11
+## 0.1.1 2008-12-11
 
 * Added a NotificationHelper to aid with Amazon IPN validation.
 * Updated the Rails helper and added more detailed documentation.
 
-== 0.1.0 2008-12-05
+## 0.1.0 2008-12-05
 
 * Initial release
 * Supports Amazon Simple Pay Standard and the-soon-to-be-released Subscriptions
