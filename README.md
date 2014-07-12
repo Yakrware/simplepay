@@ -60,17 +60,18 @@ views.  Depending on the type of Simple Pay service you're using (see
 Simplepay::Services), some form values will be required, while others may be 
 optional.  This is done like so:
 
-    <%= simplepay_form_for(:standard, {
-      :amount       => 10.95,
-      :description  => "Profit!"
-    }) %>
-    
-    <%= simplepay_form_for(:subscription, {
-      :amount                 => 10.95,
-      :description            => "MORE Profit!",
-      :recurring_frequency    => "1 month"
-    }) %>
+```
+<%= simplepay_form_for(:standard, {
+  :amount       => 10.95,
+  :description  => "Profit!"
+}) %>
 
+<%= simplepay_form_for(:subscription, {
+  :amount                 => 10.95,
+  :description            => "MORE Profit!",
+  :recurring_frequency    => "1 month"
+}) %>
+```
 
 ### Marketplace forms
 
@@ -80,12 +81,15 @@ a marketplace application, your sellers must first agree to the policy that you
 set. You can do this by specifying the Simplepay::Services::MarketplacePolicy
 service:
 
-    <%= simplepay_form_for(:marketplace_policy, {
-      :max_fixed_fee => 5.00,
-      :max_variable_fee => 5,
-      :return_url => 'http://yourservice.com',
-      :reference_id => '1234567890'
-    }) %>
+
+```
+<%= simplepay_form_for(:marketplace_policy, {
+  :max_fixed_fee => 5.00,
+  :max_variable_fee => 5,
+  :return_url => 'http://yourservice.com',
+  :reference_id => '1234567890'
+}) %>
+```
 
 The user will be prompted to login to their Amazon account and accept the policy
 you propose. After they complete the process, they'll be returned to the return_url
@@ -97,6 +101,7 @@ Amazon recipient email address).
 Only once this is done will you be able to offer marketplace checkout options for
 that sellers items:
 
+```
     <%= simplepay_form_for(:marketplace, {
       :amount                   => 34.95,
       :description              => "Mutual profit!",
@@ -104,7 +109,8 @@ that sellers items:
       :fixed_marketplace_fee    => 10.00,
       :variable_marketplace_fee => 5
     }) %>
-      
+```
+
 ## INSTALL:
 
     sudo gem install simplepay-rails4
