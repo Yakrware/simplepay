@@ -20,6 +20,9 @@ module Simplepay
       # 
       def simplepay_form_for(service_name, attributes = {}, submit_tag = nil)
         service = get_simplepay_service(service_name)
+        if block_given?
+          submit_tag = capture(&Proc.new)
+        end
         service.form(attributes, submit_tag).html_safe
       end
       

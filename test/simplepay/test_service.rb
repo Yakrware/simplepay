@@ -1,6 +1,7 @@
 require File.dirname(__FILE__) + '/../test_helper'
 require 'rexml/document'
 require 'simplepay/service'
+require 'action_view'
 
 class TestService < Simplepay::Service
   ENDPOINT_URL  = 'http://test.host.url/api'
@@ -15,6 +16,7 @@ class TestService < Simplepay::Service
 end
 
 class Simplepay::TestService < ActiveSupport::TestCase
+  include ActionView::Helpers::FormTagHelper
   
   context 'Simplepay::Service' do
     
@@ -109,7 +111,7 @@ class Simplepay::TestService < ActiveSupport::TestCase
     end
     
     should 'allow the HTML SUBMIT button to be overridden' do
-      document = REXML::Document.new(@service.form({:required => 'set'}, Simplepay::Helpers::FormHelper.tag(:input, {:type => 'submit', :value => 'Send It'})))
+      document = REXML::Document.new(@service.form({:required => 'set'}, submit_tag('Send It')))
       assert_not_nil document.root.elements["input[@type='submit' and @value='Send It']"]
     end
     

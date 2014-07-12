@@ -73,6 +73,32 @@ optional.  This is done like so:
 }) %>
 ```
 
+### Custom Submit
+
+You can add a custom submit button (and indeed custom form elements) using
+either an attribute or a block (not both)
+
+```erb
+<%= simplepay_form_for(:subscription, {
+  :amount                 => 10.95,
+  :description            => "MORE Profit!",
+  :recurring_frequency    => "1 month"
+}, submit_tag('Custom Submit')) %>
+
+<%# OR #%>
+
+<%= simplepay_form_for :marketplace, 
+  :amount => invoice.total, 
+  :description => "Mutual profit!", 
+  :recipient_email => 'seller@gmail.com', 
+  :fixed_marketplace_fee => 10.00, 
+  :variable_marketplace_fee => 5 do %>
+  <div>
+    <%= submit_tag 'Pay With Amazon', class: 'btn btn-primary' %>
+  </div>
+<% end %>
+```
+
 ### Marketplace forms
 
 Amazon Simple Pay Marketplace makes it easy to facilitate payments between
