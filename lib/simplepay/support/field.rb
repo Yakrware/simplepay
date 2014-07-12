@@ -1,4 +1,5 @@
 require 'active_support'
+require 'action_view'
 
 module Simplepay
   module Support
@@ -8,6 +9,7 @@ module Simplepay
     # form.  These fields are often unique to their service.
     # 
     class Field
+      include ActionView::Helpers::FormTagHelper
       include Comparable
       
       ALLOWED_OPTIONS = [:as, :class, :required, :value]
@@ -120,15 +122,10 @@ module Simplepay
       end
       
       
-      private
-      
+      private      
       
       def html_input_tag #:nodoc:
-        Simplepay::Helpers::FormHelper.tag(:input, {
-          :name   => service_name,
-          :value  => value,
-          :type   => 'hidden'
-        })
+        hidden_field_tag(service_name, value)
       end
       
       def normalize_options!(options) #:nodoc:

@@ -3,6 +3,7 @@ require 'active_support'
 require 'minitest-spec-rails'
 require 'minitest-spec-rails/init/active_support'
 require 'minitest-spec-rails/init/mini_shoulda'
+require 'debugger'
 
 require File.dirname(__FILE__) + '/../lib/simplepay'
 
