@@ -125,9 +125,3 @@ module Simplepay
   end
   
 end
-
-require 'simplepay/services/subscription'
-require 'simplepay/services/standard'
-require 'simplepay/services/donation'
-require 'simplepay/services/marketplace'
-require 'simplepay/services/marketplace_policy'

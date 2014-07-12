@@ -17,13 +17,13 @@ class Simplepay::TestValidatorHelper < ActiveSupport::TestCase
       @validator = TestValidatorClass.new
     end
     
-    should 'defer to Simplepay::Authentication.authentic?' do
-      #Simplepay::Authentication.expects(:authentic?).with({:test => 'testing'}, 'signed').returns(true)
+    should 'defer to Simplepay::signature.authentic?' do
+      #Simplepay::signature.expects(:authentic?).with({:test => 'testing'}, 'signed').returns(true)
       #assert @validator.testing({:test => 'testing', :signature => 'signed'})
     end
     
     should 'work with string hash keys' do
-      #Simplepay::Authentication.expects(:authentic?).with({:test => 'testing'}, 'signed').returns(true)
+      #Simplepay::signature.expects(:authentic?).with({:test => 'testing'}, 'signed').returns(true)
       #assert @validator.testing({"test" => 'testing', "signature" => 'signed'})
     end
     

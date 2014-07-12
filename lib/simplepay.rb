@@ -3,10 +3,17 @@ require 'active_support/dependencies'
 
 module Simplepay
   autoload :Constants, 'simplepay/constants'
-  autoload :Support, 'simplepay/support'
-  autoload :Authentication, 'simplepay/authentication'
   autoload :Service, 'simplepay/service'
-  autoload :Validator, 'simplepay/validator'
+  module Services  
+    autoload :Donation, 'simplepay/services/donation'
+    autoload :Marketplace, 'simplepay/services/marketplace'
+    autoload :Marketplace_policy, 'simplepay/services/marketplace_policy'
+    autoload :Standard, 'simplepay/services/standard'
+    autoload :Subscription, 'simplepay/services/subscription'
+  end
+  autoload :Signature, 'simplepay/signature'
+  autoload :Support, 'simplepay/support'
+  autoload :Validator, 'simplepay/validator'  
     
   mattr_accessor :aws_access_key_id
   @@aws_access_key_id = '' 
@@ -28,5 +35,4 @@ module Simplepay
   end
 end
 
-p 'engined'
 require "simplepay/engine" if defined?(::Rails)

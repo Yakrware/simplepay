@@ -17,16 +17,17 @@ Supports the following Amazon Simple Pay services:
 
 Add simplepay to your Bundler Gemfile
 
-    (in Gemfile)
+    #in Gemfile
     
     gem "simplepay-rails4", :require => 'simplepay'
 
 Configure the gem with your Amazon Web Services credentials:
 
-    (in config/initializers/simplepay.rb)
+    #in config/initializers/simplepay.rb
     
     Simplepay.aws_access_key_id     = 'MYAMAZONACCESSKEYID'
     Simplepay.aws_secret_access_key = 'MYAMAZONSECRETACCESSKEY'
+    Simplepay.use_sandbox = true # defaulted to true
 
 ### Obtaining Amazon Web Services Credentials
     

@@ -1,9 +1,9 @@
 require File.dirname(__FILE__) + '/../test_helper'
-require 'simplepay/authentication'
+require 'simplepay/signature'
 
-class Simplepay::TestAuthentication < ActiveSupport::TestCase
+class Simplepay::TestSignature < ActiveSupport::TestCase
   
-  context 'Simplepay::Authentication' do
+  context 'Simplepay::Signature' do
     
     setup do
       @uri        = URI.parse('https://authorize.payments-sandbox.amazon.com/pba/pipeline')

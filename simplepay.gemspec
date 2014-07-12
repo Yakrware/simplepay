@@ -3,10 +3,9 @@
 # Instead, edit Jeweler::Tasks in Rakefile, and run 'rake gemspec'
 # -*- encoding: utf-8 -*-
 
-Gem::Specification.new do |s|
-  s.name = "simplepay-rails4"
-  s.version = "0.4.0"
+require File.expand_path('../lib/simplepay/version', __FILE__)
 
+Gem::Specification.new do |s|
   s.authors = ["Nathaniel E. Bibler", "Derrick Parkhurst", "Charles DuBose"]
   s.email = ['gem@nathanielbibler.com', 'gem@dubo.se']
   
@@ -15,6 +14,9 @@ Gem::Specification.new do |s|
   
   s.homepage = 'https://github.com/Yakrware/simplepay'
   s.license  = 'MIT'
+
+  s.name = "simplepay-rails4"
+  s.version = Simplepay::VERSION
 
   s.required_ruby_version = '>= 1.9.3'
 
