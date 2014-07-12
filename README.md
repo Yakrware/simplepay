@@ -60,7 +60,7 @@ views.  Depending on the type of Simple Pay service you're using (see
 Simplepay::Services), some form values will be required, while others may be 
 optional.  This is done like so:
 
-```
+```erb
 <%= simplepay_form_for(:standard, {
   :amount       => 10.95,
   :description  => "Profit!"
@@ -82,7 +82,7 @@ set. You can do this by specifying the Simplepay::Services::MarketplacePolicy
 service:
 
 
-```
+```erb
 <%= simplepay_form_for(:marketplace_policy, {
   :max_fixed_fee => 5.00,
   :max_variable_fee => 5,
@@ -101,14 +101,14 @@ Amazon recipient email address).
 Only once this is done will you be able to offer marketplace checkout options for
 that sellers items:
 
-```
-    <%= simplepay_form_for(:marketplace, {
-      :amount                   => 34.95,
-      :description              => "Mutual profit!",
-      :recipient_email          => 'seller@gmail.com',
-      :fixed_marketplace_fee    => 10.00,
-      :variable_marketplace_fee => 5
-    }) %>
+```erb
+<%= simplepay_form_for(:marketplace, {
+  :amount                   => 34.95,
+  :description              => "Mutual profit!",
+  :recipient_email          => 'seller@gmail.com',
+  :fixed_marketplace_fee    => 10.00,
+  :variable_marketplace_fee => 5
+}) %>
 ```
 
 ## INSTALL:
