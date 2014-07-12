@@ -27,3 +27,6 @@ module Simplepay
     include ::Simplepay::Validator
   end
 end
+
+p 'engined'
+require "simplepay/engine" if defined?(::Rails)
